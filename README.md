@@ -1,4 +1,4 @@
-# Python Data Analysis Fundamentals
+# H1_python-data-analysis-fundamentals
 
 This repository focuses on fundamental data analysis techniques using Python, with a special emphasis on the key libraries NumPy and Pandas.
 
@@ -18,43 +18,65 @@ This project demonstrates practical data science workflows using two important d
   - Statistical analysis of penguin measurements and Titanic passenger data
   - Data visualization of key relationships and distributions
 
-- `1.hafta.ipynb`: Supplementary notebook covering:
-  - Introduction to Python basics for data analysis
-  - NumPy array manipulation fundamentals
-  - Pandas DataFrame operations
-
 - Supporting datasets:
   - `penguins.csv`: Contains measurements across different penguin species
   - `titanic.csv`: Contains Titanic passenger information and survival data
 
-## Key Techniques Demonstrated in the Main Assignment
+## Key Techniques Demonstrated
 
-The `Hafta_1_Odev.ipynb` notebook showcases several important data analysis skills:
+The assignment notebook showcases several essential data analysis skills:
 
 ### 1. Data Loading and Connection
 ```python
-from google.colab import drive
-drive.mount('/content/drive')
-file_path = '/content/drive/MyDrive/Acun Medya/Hafta_1/penguins.csv'
-data = pd.read_csv(file_path)
+# Example code for loading data
+import pandas as pd
+penguins_df = pd.read_csv('penguins.csv')
+titanic_df = pd.read_csv('titanic.csv')
 ```
 
 ### 2. Data Exploration and Understanding
 - Examining dataset structure with `df.shape`, `df.columns`, `df.info()`
 - Statistical summaries using `df.describe()`
-- Handling missing values
+- Handling missing values with various techniques
 - Data type conversion and preparation
 
 ### 3. Advanced Data Analysis
 - Filtering data based on multiple conditions
 - Creating derived features
 - Grouping and aggregating data
-- Statistical analysis by categories
+- Statistical analysis by categories (mean, median, mode, standard deviation)
+- Data cleaning and preprocessing
 
 ### 4. Data Visualization
 - Distribution plots for continuous variables
 - Relationship visualization between key features
 - Categorical data visualization
+
+### 5. Feature Engineering
+- One-hot encoding for categorical variables using `get_dummies`
+- Handling missing values with appropriate strategies
+- Feature selection for analysis
+
+## Datasets Description
+
+### Penguins Dataset
+The Penguins dataset contains information about different penguin species found in Antarctica, including:
+- Species (Adelie, Gentoo, Chinstrap)
+- Islands where observed (Torgersen, Biscoe, Dream)
+- Bill dimensions (length and depth in mm)
+- Flipper length (in mm)
+- Body mass (in grams)
+- Sex and observation year
+
+### Titanic Dataset
+The Titanic dataset provides information about passengers aboard the Titanic, including:
+- Survival status (0 = No, 1 = Yes)
+- Passenger class (1st, 2nd, 3rd)
+- Name, Sex, and Age
+- Number of siblings/spouses aboard (SibSp)
+- Number of parents/children aboard (Parch)
+- Ticket number and fare
+- Cabin and port of embarkation
 
 ## Learning Outcomes
 
